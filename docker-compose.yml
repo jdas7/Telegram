@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  bot-telegram:
+    image: bot-telegram:latest
+    container_name: bot-telegram
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code/
+    command: sh /code/run.sh
